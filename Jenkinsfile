@@ -13,6 +13,7 @@ pipeline {
                 echo "echo hello-nti" > hello-nti.sh
                 chmod +x hello-nti.sh
                 ./hello-nti.sh
+                docker ps 
                 '''
             }
         }
