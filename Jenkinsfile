@@ -4,12 +4,16 @@ pipeline {
     stages {
         stage ('hello-world') {
             steps {
-                echo "hello world"
+                sh "echo 'hello world from a shell script!'"
             }
         }
         stage ('hello-nti') {
             steps {
-                echo "hello nti"
+                sh '''
+                echo "echo hello-nti" > hello-nti.sh
+                chmod +x hello-nti.sh
+                ./hello-nti.sh
+                '''
             }
         }
     }
