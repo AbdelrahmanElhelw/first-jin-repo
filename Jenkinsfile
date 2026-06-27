@@ -5,11 +5,14 @@ pipeline {
 
 stages {
   stage ('hello-world') {
-  echo "hello world"
+     steps{
+        echo "hello world"
   }
-
+  }
   stage ('hello-nti') {
-  echo "hello nti"
+     steps{
+        echo "hello nti"
+  }
   }
 
 }
